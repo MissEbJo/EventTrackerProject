@@ -13,7 +13,7 @@
 |------------|-------------|-----|--------------|
 |List<Anime> | GET         | /api/animes|       |
 |Anime       | GET         | /api/animes/{id}|  |
-|Anime       | GET         | /api/animes/       | Anime JSON |
+|Anime       | POST         | /api/animes/       | Anime JSON |
 
 ### Technologies Used
 
