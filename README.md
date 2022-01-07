@@ -1,14 +1,14 @@
 # EventTrackerProject
 
-##Overview
+## Overview
 
-##REST applying
+### REST applying
 
-###HTML/JavaScript
+### HTML/JavaScript
 
-###Angular Front End
+## Angular Front End
 
-###REST API Reference
+### REST API Reference
 |Return Type | HTTP Method | URI | Request Body |
 |------------|-------------|-----|--------------|
 |List<Anime> | GET         | /api/animes|       |
@@ -17,4 +17,4 @@
 
 ### Technologies Used
 
-## Lessons Learned
+### Lessons Learned
