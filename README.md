@@ -1,8 +1,8 @@
-# EventTrackerProject
+# Event Tracker Project
 
 ## Overview
 Welcome to Kawaii Anime, your favorite database to look up, add, and update anime.
-Whether you're looking for a certain anime or what to view different types of anime, Kawaii is the website for you! As you look through the website, you can search for an anime by id or keyword. 
+Whether you're looking for a certain anime or what to view different types of anime, Kawaii is the website for you! As you look through the website, you can search for an anime by id or keyword.
 
 ### REST applying
 
