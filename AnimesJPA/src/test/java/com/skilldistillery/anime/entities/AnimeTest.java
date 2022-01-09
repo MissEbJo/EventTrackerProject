@@ -47,5 +47,11 @@ class AnimeTest {
 		assertEquals("Maidsama", anime.getTitle());
 		
 	}
+	@Test
+	@DisplayName("test Anime date mappings")
+	void test2() {
+		assertNotNull(anime);
+		assertEquals(2010, anime.getAired().getYear());
+	}
 
 }
