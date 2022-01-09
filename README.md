@@ -16,7 +16,15 @@ Whether you're looking for a certain anime or what to view different types of an
 |`List<Anime>` | `GET /api/animes`| Gets all anime| |
 |`Anime`       | `GET /api/animes/{id}` | Gets anime by id| |
 |`Anime`       | `POST /api/animes/` | Creates a new anime| `{ "title": "Fullmetal Alchemist"}`|
-|`Anime`       | `PUT /api/animes/{id}`| Updates anime |
+|`Anime`       | `PUT /api/animes/{id}`| Updates anime |`{"id": 5,
+    "title": "Toyko Ghoul",
+    "description": null,
+    "imageUrl": null,
+    "aired": "2015-04-04",
+    "seasons": 2,
+    "episodes": 51,
+    "trailerUrl": null,
+    "soundtrackUrl": null}` |
 |`void`        |`DELETE /api/animes/{id}`| Deletes a anime by id|
 |`List<Anime>`| `GET /api/animes/search/{keyword}`| Gets all anime by title|
 
