@@ -84,6 +84,8 @@ public class AnimeController {
 	
 	@GetMapping("animes/search/{keyword}")
 	public List<Anime> searchAnimeBykeyword(@PathVariable String keyword, HttpServletResponse res ){
+		//add status code
+		
 		return aniSer.showAnimeByKeyword(keyword);
 	}
 }
