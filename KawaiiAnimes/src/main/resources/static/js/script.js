@@ -6,6 +6,6 @@ window.addEventListener('load', function(e){
 });
 
 function init(){
-	console.log('init loaded');
+	console.log('init jere');
 	//TODO - setup event listeners for forms, etc.
 }
