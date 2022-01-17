@@ -33,8 +33,7 @@ public class AnimeServiceImpl implements AnimeService {
 
 	@Override
 	public Anime create(Anime anime) {
-		Anime newAnime = aniRepo.save(anime);
-		return newAnime;
+		return aniRepo.save(anime);
 	}
 
 	@Override

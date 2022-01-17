@@ -46,7 +46,6 @@ public class AnimeController {
 			res.setStatus(404);
 		} else {
 			res.setStatus(201);
-			res.setHeader("Location", "http://localhost8083/animes/" + anime.getId());
 		}
 		return newAnime;
 
