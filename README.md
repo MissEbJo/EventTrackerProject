@@ -7,6 +7,7 @@ Whether you're looking for a certain anime or what to view different types of an
 ### REST applying
 
 ### HTML/JavaScript
+This project includes HTML/JavaScript functionality. It uses the HTML to create divs & the Script to dynamically create forms & tables to display each anime.
 
 ## Angular Front End
 
