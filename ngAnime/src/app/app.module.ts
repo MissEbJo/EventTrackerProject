@@ -7,17 +7,23 @@ import { HomeComponent } from './components/home/home.component';
 import {HttpClientModule } from '@angular/common/http';
 import { AnimeService } from './services/anime.service';
 import { AnimeComponent } from './components/anime/anime.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { YoutubePlayerComponent } from './components/youtube-player/youtube-player.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AnimeComponent
+    AnimeComponent,
+    YoutubePlayerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    YouTubePlayerModule,
+    FormsModule
   ],
   providers: [
     AnimeService
@@ -25,3 +31,4 @@ import { AnimeComponent } from './components/anime/anime.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export class YoutubePlayerExampleModule {}
