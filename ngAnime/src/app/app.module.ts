@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import {HttpClientModule } from '@angular/common/http';
 import { AnimeService } from './services/anime.service';
+import { AnimeComponent } from './components/anime/anime.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AnimeComponent
   ],
   imports: [
     BrowserModule,

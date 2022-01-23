@@ -1,0 +1,20 @@
+<h1>KawaiiAnimes Listings</h1>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Title</th>
+        <th>Seasons</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let anime of animes">
+        <td>
+          <img [src]="anime.imageUrl" >
+        </td>
+        <td>{{anime.title}}</td>
+        <td>{{anime.seasons}}</td>
+      </tr>
+  </table>
+</div>
