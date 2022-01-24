@@ -47,7 +47,7 @@ update(anime:Anime): Observable<Anime>{
 }
 
 destroy(animeId: number): Observable<void>{
-  return this.http.delete<void>(`${this.url}/{animeId}`).pipe(
+  return this.http.delete<void>(`${this.url}/${animeId}`).pipe(
     catchError((err: any) => {
       console.error('AnimeService.destroy(): error deleting anime');
       console.error(err);

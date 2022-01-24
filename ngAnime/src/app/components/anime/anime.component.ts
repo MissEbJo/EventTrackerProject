@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Anime } from 'src/app/models/anime';
+import { CounterPipe } from 'src/app/pipes/counter.pipe';
 import { AnimeService } from 'src/app/services/anime.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class AnimeComponent implements OnInit {
   editAnime: Anime | null = null;
 
   constructor(
-    private aniSer: AnimeService
+    private aniSer: AnimeService,
+    private counterPipe: CounterPipe
   ) { }
 
   ngOnInit(): void {
@@ -31,6 +33,9 @@ export class AnimeComponent implements OnInit {
         console.error(err);
       }
     })
+  }
+  getNumOfAnime(){
+    return this.counterPipe.transform(this.animes);
   }
   addAnime(anime: Anime){
     this.aniSer.create(this.newAnime);

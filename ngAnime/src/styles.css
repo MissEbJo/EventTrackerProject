@@ -1,2 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-image: url('https://i.pinimg.com/originals/4c/20/26/4c20260a0a7b04cd389c6cf0af46f3b8.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}

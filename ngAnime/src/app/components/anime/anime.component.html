@@ -1,6 +1,6 @@
 <h1>KawaiiAnimes Listings</h1>
 <div id=tableList *ngIf="!selected">
-  <table>
+  <table class="table table-clear ">
     <thead>
       <tr>
         <th></th>
@@ -11,40 +11,46 @@
     <tbody>
       <tr *ngFor="let anime of animes">
         <td>
-          <img [src]="anime.imageUrl" >
+          <img id="home" [src]="anime.imageUrl" >
         </td>
         <td (click)="displayAnime(anime)">{{anime.title}}</td>
         <td>{{anime.seasons}}</td>
       </tr>
-  </table>
-</div>
-<div id="addNewAnime" *ngIf="!editAnime && !selected">
+      <!-- Number of animes: {{getNumOfAnime}} -->
+    </table>
+  </div>
+  <div id="addNewAnime" *ngIf="!editAnime && !selected">
+   <form class="form">
   <h4>Add New Anime:</h4><br>
   Title:
-<input type="text" name="title" placeholder="Anime Title" [(ngModel)]="newAnime.title"/><br>
-Description:
-<input type="text" name="description" placeholder="Anime Description" [(ngModel)]="newAnime.description"/><br>
-Aired date:
-<input type="date" name="aired" placeholder="Anime Aired" [(ngModel)]="newAnime.aired"/><br>
-Number of Seasons:
-<input type="number" name="seasons" placeholder="Anime Seasons" [(ngModel)]="newAnime.seasons"/><br>
-Number of Episodes:
-<input type="number" name="episodes" placeholder="Anime Episodes" [(ngModel)]="newAnime.episodes"/><br>
-<input type="submit" value="ADD ANIME" (click)="addAnime(newAnime)"/>
+  <input type="text" name="title" placeholder="Anime Title" [(ngModel)]="newAnime.title"/><br>
+  Description:
+  <input type="text" name="description" placeholder="Anime Description" [(ngModel)]="newAnime.description"/><br>
+  Aired date:
+  <input type="date" name="aired" placeholder="Anime Aired" [(ngModel)]="newAnime.aired"/><br>
+  Number of Seasons:
+  <input type="number" name="seasons" placeholder="Anime Seasons" [(ngModel)]="newAnime.seasons"/><br>
+  Number of Episodes:
+  <input type="number" name="episodes" placeholder="Anime Episodes" [(ngModel)]="newAnime.episodes"/><br>
+  Add an Image URL(optional):
+  <input type="img" name="imageUrl"  [(ngModel)]="newAnime.imageUrl"/><br>
+  <input type="submit" value="ADD ANIME" (click)="addAnime(newAnime)"/>
+   </form>
 </div>
 
 <div id="detailedTable" *ngIf="selected && !editAnime">
-<img [src]="selected.imageUrl" >
-<p>{{selected.id}}</p>
-<p>{{selected.title}}</p>
-<p>{{selected.aired}}</p>
-<p>{{selected.description}}</p>
-<p>{{selected.seasons}}</p>
-<p>{{selected.episodes}}</p>
-<!-- <p>{{selected.trailerUrl}}</p> -->
-<!-- <audio src="{{selected.soundtrackUrl}}"></audio> -->
-<button (click)="setEditAnime()">Edit</button>
-<button (click)="selected = null">Back</button>
+  <img [src]="selected.imageUrl" >
+  <p>{{selected.id}}</p>
+  <p>{{selected.title}}</p>
+  <p>{{selected.aired}}</p>
+  <p>{{selected.description}}</p>
+  <p>{{selected.seasons}}</p>
+  <p>{{selected.episodes}}</p>
+  <!-- <p>{{selected.trailerUrl}}</p> -->
+  <!-- <audio src="{{selected.soundtrackUrl}}"></audio> -->
+  <button (click)="setEditAnime()">Edit</button>
+  <button (click)="selected = null">Back</button>
+  <button class="btn-danger" (click)="deleteAnime(selected.id)" (click)="displayTable()">Delete Anime</button>
 </div>
 
 <div *ngIf="editAnime">
@@ -54,6 +60,7 @@ Number of Episodes:
   <input type="date" name="aired" placeholder="Anime Aired" [(ngModel)]="editAnime.aired"/><br>
   <input type="number" name="seasons" placeholder="Anime Seasons" [(ngModel)]="editAnime.seasons"/><br>
   <input type="number" name="episodes" placeholder="Anime episodes" [(ngModel)]="editAnime.episodes"/><br>
+  <input type="img" name="imageUrl"  [(ngModel)]="editAnime.imageUrl"/><br>
   <button (click)="updateAnime(editAnime)">Save</button>
   <button (click)="editAnime = null">Cancel</button>
 </div>

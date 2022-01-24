@@ -10,13 +10,15 @@ import { AnimeComponent } from './components/anime/anime.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { YoutubePlayerComponent } from './components/youtube-player/youtube-player.component';
 import { FormsModule } from '@angular/forms';
+import { CounterPipe } from './pipes/counter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AnimeComponent,
-    YoutubePlayerComponent
+    YoutubePlayerComponent,
+    CounterPipe
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   providers: [
-    AnimeService
+    AnimeService,
+    CounterPipe
   ],
   bootstrap: [AppComponent]
 })
